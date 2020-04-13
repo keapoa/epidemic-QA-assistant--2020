@@ -5,7 +5,7 @@
 
 疫情问答助手baseline思路比较简单：把数据整成官方训练数据json格式训练即可。预测文件难点在于找到答案文档。这里基于bm25检索文档，为了提高答案召回率可以按照bm25得分多取几个，这里比较佛系，我取了个top3预测。线上提交得分0.58+。
 
-数据处理,生成训练数据,预测数据都在data_process.ipynb里面.
+数据处理,生成训练数据,预测数据都在data_process.py里面.
 
 这里用的是bert_wwm文件这里可以下载：https://github.com/ymcui/Chinese-BERT-wwm
 
