@@ -29,7 +29,7 @@
     --doc_stride 128 \
     --output_dir /home/wq/torch0413
  
- 
+ 下面checkpoint-3是训练过程生成最优模型所在路径.
  预测执行：python gf_run_squad.py \
     --model_type bert \
     --model_name_or_path "/home/wq/torch0413/checkpoint-3" \
@@ -45,7 +45,7 @@
     --doc_stride 128 \
     --output_dir "/home/wq/torch0413/checkpoint-3"
 
-这题难点在于不用外部数据情况下,针对预测数据既能准确找到答案所在文档又能使文档尽可能的短。第一次接触问答欢迎有兴趣的同学多交流。
+这题难点在于不用外部数据情况下,针对预测数据既能准确找到答案所在文档又能使文档尽可能的短。第一次接触问答,欢迎有兴趣的同学多交流。
 
 
 
