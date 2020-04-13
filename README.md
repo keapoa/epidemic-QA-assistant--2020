@@ -28,6 +28,8 @@
     --warmup_steps 2500 \
     --doc_stride 128 \
     --output_dir /home/wq/torch0413
+ 
+ 
  预测执行：python gf_run_squad.py \
     --model_type bert \
     --model_name_or_path "/home/wq/torch0413/checkpoint-3" \
