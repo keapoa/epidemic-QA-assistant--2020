@@ -74,7 +74,7 @@ python gf_run_squad.py \
 --version_2_with_negative \
 --output_dir /home/wq/torch0512
 与之前有所不同的是此次数据采用了sq2.0数据样式，添加了version_2_with_negative字段
-数据预测可以参考同上，这里直接用test.py就可以。至于分数现在没法提交，后续可以提交在补上，应该可以提高很多。
+数据预测可以参考同上，这里需要按照训练集构造数据逻辑构造即可。这里直接用test.py，主要是为了跟参考的同学一致。至于分数现在没法提交，后续可以提交在补上，应该可以提高很多。
 
 
 
