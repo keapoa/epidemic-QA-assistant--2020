@@ -47,5 +47,33 @@
 
 这题难点在于不用外部数据情况下,针对预测数据既能准确找到答案所在文档又能使文档尽可能的短。第一次接触问答,欢迎有兴趣的同学多交流。
 
+******************************************分割线**********************************************
+
+后续参考https://github.com/wptoux/yqzwqa这位同学的思路，在我的基础上做了修改，注意到本次问答所给的训练集对应文档并非唯一，这个可以通过判断增加一倍的数据量。
+数据处理参考：squad_data_process.ipynb。
+训练模型执行：
+python gf_run_squad.py \
+--model_type bert \
+--model_name_or_path /home/wq/bert_wwm/pytorch_model.bin \
+--config_name /home/wq/bert_wwm/bert_config.json \
+--tokenizer_name /home/wq/bert_wwm/vocab.txt \
+--do_train \
+--do_eval \
+--do_lower_case \
+--train_file /home/wq/squad_train.json \
+--predict_file /home/wq/squad_eval.json \
+--per_gpu_train_batch_size 6 \
+--learning_rate 3e-5 \
+--num_train_epochs 4 \
+--max_seq_length 512 \
+--max_query_length 80 \
+--max_answer_length 400 \
+--warmup_steps 2500 \
+--doc_stride 128 \
+--version_2_with_negative \
+--output_dir /home/wq/torch0512
+与之前有所不同的是此次数据采用了sq2.0数据样式，添加了version_2_with_negative字段
+数据预测可以参考同上，这里直接用test.py就可以。至于分数现在没法提交，后续可以提交在补上，应该可以提高很多。
+
 
 
